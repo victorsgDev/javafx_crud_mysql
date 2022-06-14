@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox prefHeight="498.0" prefWidth="1358.0" spacing="40.0" style="-fx-background-color: aliceblue;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cuestion3_hito3t.ProductoController">
+   <children>
+      <VBox prefHeight="340.0" prefWidth="648.0">
+         <children>
+            <Label prefHeight="37.0" prefWidth="177.0" text="Nombre Producto">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></Label>
+            <TextField id="et_name" fx:id="et_nombre" prefHeight="26.0" prefWidth="404.0" />
+            <Label prefHeight="37.0" prefWidth="177.0" text="Unidades">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></Label>
+            <ChoiceBox id="unidades" fx:id="combo_unidades" blendMode="MULTIPLY" prefWidth="200.0" style="-fx-background-color: #DAE5D0;" />
+            <Label prefHeight="37.0" prefWidth="177.0" text="Precio">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></Label>
+            <TextField id="et_precio" fx:id="et_precio" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="439.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin></TextField>
+            <CheckBox id="checkbox_disponible" fx:id="cb_disponible" mnemonicParsing="false" prefHeight="26.0" prefWidth="182.0" text="Disponible">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></CheckBox>
+            <HBox prefHeight="189.0" prefWidth="607.0" spacing="35.0">
+               <children>
+                  <Button id="btn_insert" fx:id="btn_insert" layoutX="10.0" layoutY="40.0" mnemonicParsing="false" onAction="#add" prefHeight="30.0" prefWidth="122.0" style="-fx-background-color: #F9CEEE;" text="Insertar producto">
+                     <HBox.margin>
+                        <Insets right="40.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" />
+                     </font>
+                  </Button>
+                  <VBox prefHeight="129.0" prefWidth="135.0">
+                     <children>
+                        <Button id="btn_update" fx:id="btn_update" mnemonicParsing="false" onAction="#update" prefHeight="30.0" prefWidth="139.0" style="-fx-background-color: #F9CEEE;" text="Actualizar producto">
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" />
+                           </font>
+                        </Button>
+                        <ChoiceBox fx:id="combo_update" prefWidth="150.0" style="-fx-background-color: #DAE5D0;" />
+                     </children>
+                     <HBox.margin>
+                        <Insets right="40.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox prefHeight="129.0" prefWidth="126.0">
+                     <children>
+                        <Button id="btn_delete" fx:id="btn_delete" mnemonicParsing="false" onAction="#delete" prefHeight="32.0" prefWidth="122.0" style="-fx-background-color: #F9CEEE;" text="Eliminar producto">
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" />
+                           </font>
+                        </Button>
+                        <ChoiceBox fx:id="combo_delete" prefWidth="122.0" style="-fx-background-color: #DAE5D0;" />
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="30.0" top="10.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="30.0" top="30.0" />
+               </padding>
+            </HBox>
+         </children>
+         <HBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </HBox.margin>
+      </VBox>
+      <TableView fx:id="table" prefHeight="346.0" prefWidth="583.0" style="-fx-background-color: #06113C;">
+        <columns>
+            <TableColumn fx:id="tbcl_id" prefWidth="105.59997254610062" text="IDPRODUCTO" />
+            <TableColumn fx:id="tbcl_nombre" prefWidth="73.60003662109375" text="NOMBRE" />
+            <TableColumn fx:id="tbcl_fecha" prefWidth="132.79994201660156" text="FECHA ENVASADO" />
+            <TableColumn fx:id="tbcl_unidades" prefWidth="92.7999267578125" text="UNIDADES" />
+            <TableColumn fx:id="tbcl_precio" prefWidth="72.7999267578125" text="PRECIO" />
+            <TableColumn fx:id="tbcl_disponible" prefWidth="100.800048828125" text="DISPONIBLE" />
+        </columns>
+      </TableView>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</HBox>
